@@ -5,4 +5,4 @@ dubbo:
   application:
     name: manager-web
   registry:
-    address: zookeeper://127.0.0.1:2181
+    address: zookeeper://139.196.166.75:2181
