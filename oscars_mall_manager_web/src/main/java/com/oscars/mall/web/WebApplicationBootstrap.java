@@ -1,7 +1,9 @@
 package com.oscars.mall.web;
 
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author HJC
@@ -11,6 +13,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @description :
  */
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.oscars"})
+@EnableDubbo
 public class WebApplicationBootstrap {
     public static void main(String[] args) {
         SpringApplication.run(WebApplicationBootstrap.class,args);
