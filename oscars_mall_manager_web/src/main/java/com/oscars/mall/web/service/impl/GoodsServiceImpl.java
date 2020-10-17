@@ -3,8 +3,7 @@ package com.oscars.mall.web.service.impl;
 import com.oscars.common.utils.R;
 import com.oscars.mall.goods.service.GoodsRPCService;
 import com.oscars.mall.web.service.GoodsService;
-import org.apache.dubbo.config.annotation.Reference;
-import org.apache.dubbo.rpc.cluster.Constants;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Component;
 
 /**
@@ -17,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class GoodsServiceImpl implements GoodsService {
 
-    @Reference( check = false , loadbalance = Constants.LOADBALANCE_KEY)
+    @DubboReference( check = false)
     private GoodsRPCService goodsRPCService;
 
     @Override

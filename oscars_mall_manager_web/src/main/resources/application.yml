@@ -1,8 +1,14 @@
 server:
-  port: 8080
+  port: 8001
+
 
 dubbo:
   application:
     name: manager-web
   registry:
     address: zookeeper://139.196.166.75:2181
+spring:
+  application:
+    name: manager-web
+  profiles:
+    active: dev

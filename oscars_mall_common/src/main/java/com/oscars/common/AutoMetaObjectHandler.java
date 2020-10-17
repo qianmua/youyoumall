@@ -13,7 +13,6 @@ import java.util.Date;
  * @date 2020/8/11  15:49
  * @description : 自动填充
  */
-@Component
 public class AutoMetaObjectHandler implements MetaObjectHandler {
 
     @Override
