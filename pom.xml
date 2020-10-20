@@ -19,6 +19,10 @@
         <module>oscars_mall_pay_service</module>
         <module>oscars_mall_order_service</module>
         <module>oscars_mall_search_service</module>
+        <module>oscars_mall_order_interface</module>
+        <module>oscars_mall_pay_interface</module>
+        <module>oscars_mall_search_interface</module>
+        <module>renren-generator</module>
     </modules>
 
     <dependencyManagement>
