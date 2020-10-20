@@ -16,6 +16,9 @@
         <module>oscars_mall_goods_interface</module>
         <module>oscars_mall_goods_service</module>
         <module>oscars_mall_shop_web</module>
+        <module>oscars_mall_pay_service</module>
+        <module>oscars_mall_order_service</module>
+        <module>oscars_mall_search_service</module>
     </modules>
 
     <dependencyManagement>
