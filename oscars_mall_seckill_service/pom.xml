@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>oscars_mall_pay_service</artifactId>
-
+    <artifactId>oscars_mall_seckill_service</artifactId>
     <dependencies>
 
         <dependency>

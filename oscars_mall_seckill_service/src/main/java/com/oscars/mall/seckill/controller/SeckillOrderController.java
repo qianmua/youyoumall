@@ -1,12 +1,11 @@
-package com.oscars.mall.order.controller;
+package com.oscars.mall.seckill.controller;
 
 import java.util.Arrays;
 import java.util.Map;
 
 import com.oscars.common.utils.PageUtils;
 import com.oscars.common.utils.R;
-import com.oscars.mall.order.entity.OrderItemEntity;
-import com.oscars.mall.order.service.OrderItemService;
+import com.oscars.mall.seckill.service.SeckillOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,29 +13,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.oscars.mall.seckill.entity.SeckillOrderEntity;
 
 
 
 /**
  * 
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2020-10-20 20:27:34
+ * @author qianmua
+ * @email hjcwyhasgo@163.com
+ * @date 2020-10-20 21:05:33
  */
 @RestController
-@RequestMapping("generator/orderitem")
-public class OrderItemController {
+@RequestMapping("generator/seckillorder")
+public class SeckillOrderController {
     @Autowired
-    private OrderItemService orderItemService;
+    private SeckillOrderService seckillOrderService;
 
     /**
      * 列表
      */
     @RequestMapping("/list")
     public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = orderItemService.queryPage(params);
+        PageUtils page = seckillOrderService.queryPage(params);
 
         return R.ok().put("page", page);
     }
@@ -47,17 +46,17 @@ public class OrderItemController {
      */
     @RequestMapping("/info/{id}")
     public R info(@PathVariable("id") Long id){
-		OrderItemEntity orderItem = orderItemService.getById(id);
+		SeckillOrderEntity seckillOrder = seckillOrderService.getById(id);
 
-        return R.ok().put("orderItem", orderItem);
+        return R.ok().put("seckillOrder", seckillOrder);
     }
 
     /**
      * 保存
      */
     @RequestMapping("/save")
-    public R save(@RequestBody OrderItemEntity orderItem){
-		orderItemService.save(orderItem);
+    public R save(@RequestBody SeckillOrderEntity seckillOrder){
+		seckillOrderService.save(seckillOrder);
 
         return R.ok();
     }
@@ -66,8 +65,8 @@ public class OrderItemController {
      * 修改
      */
     @RequestMapping("/update")
-    public R update(@RequestBody OrderItemEntity orderItem){
-		orderItemService.updateById(orderItem);
+    public R update(@RequestBody SeckillOrderEntity seckillOrder){
+		seckillOrderService.updateById(seckillOrder);
 
         return R.ok();
     }
@@ -77,7 +76,7 @@ public class OrderItemController {
      */
     @RequestMapping("/delete")
     public R delete(@RequestBody Long[] ids){
-		orderItemService.removeByIds(Arrays.asList(ids));
+		seckillOrderService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }

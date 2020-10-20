@@ -23,6 +23,8 @@
         <module>oscars_mall_pay_interface</module>
         <module>oscars_mall_search_interface</module>
         <module>renren-generator</module>
+        <module>oscars_mall_seckill_service</module>
+        <module>oscars_mall_seckill_interface</module>
     </modules>
 
     <dependencyManagement>
